@@ -21,22 +21,21 @@ public class AreaDaoTest {
     private AreaDao areaDao;
 
     @Test
-    @Ignore
-    public void queryArea() throws Exception {
+    public void queryArea() {
         List<Area> areaList = areaDao.queryArea();
         assertEquals(2, areaList.size());
     }
 
     @Test
     @Ignore
-    public void queryAreaById() throws Exception {
+    public void queryAreaById() {
         Area area = areaDao.queryAreaById(1);
         assertEquals("东苑", area.getAreaName());
     }
 
     @Test
     @Ignore
-    public void insertArea() throws Exception {
+    public void insertArea() {
         Area area = new Area();
         area.setAreaName("南苑");
         area.setPriority(1);
@@ -46,7 +45,7 @@ public class AreaDaoTest {
 
     @Test
     @Ignore
-    public void updateArea() throws Exception {
+    public void updateArea() {
         Area area = new Area();
         area.setAreaName("西苑");
         area.setAreaId(3);
@@ -56,7 +55,7 @@ public class AreaDaoTest {
     }
 
     @Test
-    public void deleteArea() throws Exception {
+    public void deleteArea() {
         int effectedNum = areaDao.deleteArea(3);
         assertEquals(1, effectedNum);
     }
