@@ -55,6 +55,7 @@ public class AreaDaoTest {
     }
 
     @Test
+    @Ignore
     public void deleteArea() {
         int effectedNum = areaDao.deleteArea(3);
         assertEquals(1, effectedNum);
